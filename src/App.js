@@ -107,7 +107,7 @@ const App = () => {
 
     // Initialize game variables and start the timer
     setIsGameStarted(true);
-    setTimer(20);
+    setTimer(120);
     const randomWordIndex = Math.floor(Math.random() * halloweenWords.length);
     setCurrentWord(halloweenWords[randomWordIndex]);
   };
