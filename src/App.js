@@ -107,7 +107,7 @@ const App = () => {
 
     // Initialize game variables and start the timer
     setIsGameStarted(true);
-    setTimer(120);
+    setTimer(20);
     const randomWordIndex = Math.floor(Math.random() * halloweenWords.length);
     setCurrentWord(halloweenWords[randomWordIndex]);
   };
@@ -115,10 +115,10 @@ const App = () => {
   // JSX for rendering the game UI
   return (
     <div className="App">
-      <h1>Tastespill</h1>
+      <h1 className="header">Tastespill</h1>
       {!isGameStarted ? (
         // Render input for player's name and start button before the game starts
-        <div>
+        <div className="text">
           <label>
             Navn:
             <input
@@ -132,11 +132,11 @@ const App = () => {
         </div>
       ) : (
         // Render game elements during gameplay
-        <div>
+        <div className="tekst">
           <div className="timer">
             Tid igjen: <span>{timer} sekunder</span>
           </div>
-          <div className="word">{currentWord}</div>
+          <div className="text">{currentWord}</div>
           <input
             type="text"
             disabled={timer === 0}
@@ -146,10 +146,12 @@ const App = () => {
           />
           {timer === 0 && isGameStarted ? (
             // Display final score when the game ends
-            <div>Spillet er ferdig. Du fikk {score + extraPoints} poeng</div>
+            <div className="text">
+              Spillet er ferdig. Du fikk {score + extraPoints} poeng
+            </div>
           ) : (
             // Display the player's score during gameplay
-            <div className="score">Poeng: {score + extraPoints}</div>
+            <div className="text">Poeng: {score + extraPoints}</div>
           )}
         </div>
       )}

@@ -6,6 +6,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: url(./assets/halloween.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: orange;
+}
+
+.text {
+  color: orange;
+}
+
+.timer {
+  color: orange;
+}
+
+.timer span {
+  color: orange;
 }
 
 code {
